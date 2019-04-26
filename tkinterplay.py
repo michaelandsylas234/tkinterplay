@@ -10,7 +10,9 @@ def lower_win1():
     win1.lower(belowThis=root)
     gotobed = tk.Toplevel(win1, bg='red')
     l = tk.Label(gotobed, text="my mom said so")
+    b = tk.Button(gotobed, text="do not press this", command=lower_win1)
     l.pack()
+    b.pack()
 
 root = tk.Tk()
 root.title('root win')
