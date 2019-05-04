@@ -23,5 +23,24 @@ win1.geometry("300x150+120+120")
 btn_lift = tk.Button(win1, text="Why would you ever press this button?", command=lift_win1)
 btn_lift.pack(padx=30, pady=5)
 btn_lower = tk.Button(win1, text="MY MOM SAID SO", highlightbackground="blue", highlightthickness="30", command=lower_win1)
+
 btn_lower.pack(pady=5)
 win1.mainloop()
+
+
+# import tkinter as tk
+# from tkinter import ttk
+
+# root = tk.Tk()
+
+# # background="..." doesn't work...
+# ttk.Style().configure('green/black.TLabel', foreground='green', background='black')
+# ttk.Style().configure('green/black.TButton', foreground='green', background='black')
+
+# label = ttk.Label(root, text='I am a ttk.Label with text!', style='green/black.TLabel')
+# label.pack()
+
+# button = ttk.Button(root, text='Click Me!', style='green/black.TButton')
+# button.pack()
+
+
