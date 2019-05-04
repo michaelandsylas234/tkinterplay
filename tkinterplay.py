@@ -11,7 +11,7 @@ ttk.Style().configure('green/black.TButton', foreground='green', background='bla
 label = ttk.Label(root, text='I am a ttk.Label with text!', style='green/black.TLabel') 
 label.pack()
 
-button = ttk.Button(root, text='Click Me!', style='green/black.TButton')
+button = ttk.Button(root, text='Click Me!', style='black/black.TButton')
 button.pack()
 
 def lift_win1():
