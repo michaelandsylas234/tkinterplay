@@ -2,6 +2,9 @@
 import tkinter as tk
 from tkinter import ttk
 
+from playsound import playsound
+
+
 root = tk.Tk()
 
 # background="..." doesn't work...
@@ -19,6 +22,7 @@ def lift_win1():
 def lower_win1():
     win1.lower(belowThis=root)
     gotobed = tk.Toplevel(win1, bg='red')
+    playsound('woosh.wav')
     l = tk.Label(gotobed, text="my mom said so")
     b = tk.Button(gotobed, text="do not press this", command=lower_win1)
     l.pack()
