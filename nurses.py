@@ -7,7 +7,7 @@ def percentage():
     loading = 0
     while loading < 100:
         loading += 1
-        time.sleep(0.03)
+        time.sleep(0.01)
         update_progress(loading)
 
 
