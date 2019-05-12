@@ -1,15 +1,24 @@
-from curses import wrapper
+import curses
+import time
 
-def main(stdscr):
-    # Clear screen
-    stdscr.clear()
+curses.initscr()
 
-    # This raises ZeroDivisionError when i == 10.
-    for i in range(0, 11):
-        v = i-10
-        stdscr.addstr(i, 0, '10 divided by {} is {}'.format(v, 10/v))
+def percentage():
+    loading = 0
+    while loading < 100:
+        loading += 1
+        time.sleep(0.03)
+        update_progress(loading)
 
-    stdscr.refresh()
-    stdscr.getkey()
 
-wrapper(main)
+def update_progress(progress):
+    win = curses.newwin(3, 32, 3, 30)
+    win.border(0)
+    rangex = (30 / float(100)) * progress
+    pos = int(rangex)
+    display = '#'
+    if pos != 0:
+        win.addstr(1, 1, "{}".format(display*pos))
+        win.refresh()
+
+percentage()
