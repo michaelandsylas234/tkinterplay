@@ -12,7 +12,7 @@ def percentage():
 
 
 def update_progress(progress):
-    win = curses.newwin(3, 32, 3, 30)
+    win = curses.newwin(3, 32, 0, 0) #height, width, begin_y, begin_x
     win.border(0)
     rangex = (30 / float(100)) * progress
     pos = int(rangex)
