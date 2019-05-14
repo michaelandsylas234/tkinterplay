@@ -1,7 +1,6 @@
 import curses
 import time
-
-curses.initscr()
+from curses import wrapper
 
 def percentage():
     loading = 0
@@ -21,4 +20,16 @@ def update_progress(progress):
         win.addstr(1, 1, "{}".format(display*pos))
         win.refresh()
 
-percentage()
+
+
+
+
+def main(stdscr):
+    # Clear screen
+    stdscr.clear()
+    # Proceed with your program
+    print("Running some program")
+    percentage()
+
+
+wrapper(main)
